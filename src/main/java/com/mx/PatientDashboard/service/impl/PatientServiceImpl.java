@@ -1,3 +1,7 @@
 package com.mx.PatientDashboard.service.impl;
 
-public class PatientServiceImpl {}
+import com.mx.PatientDashboard.service.PatientService;
+import org.springframework.stereotype.Service;
+
+@Service
+public class PatientServiceImpl implements PatientService {}
