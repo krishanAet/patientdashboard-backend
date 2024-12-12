@@ -142,104 +142,6 @@ The Patient Management System provides RESTful APIs to manage patient records. T
 
 ---
 
-### 4. Update Patient
-- **Endpoint**: `PUT /patient/{id}`
-- **Description**: Updates the patient record with the provided ID.
-- **Path Parameters**:
-  - `id` (Long): The ID of the patient to update.
-- **Request Body**:
-    ```json
-    {
-      "first_name": "John",
-      "last_name": "Smith",
-      "address": "456 Updated Street",
-      "city": "Updated City",
-      "state": "IL",
-      "zip_code": "62705",
-      "phone_number": "555-111-2222",
-      "email": "john.smith@example.com"
-    }
-    ```
-- **Response Body**:
-    - **Success**:
-      ```json
-      {
-        "code": "200",
-        "errors": [],
-        "data": [
-          {
-            "id": 1,
-            "firstName": "John",
-            "lastName": "Smith",
-            "address": "456 Updated Street",
-            "city": "Updated City",
-            "state": "IL",
-            "zipCode": "62705",
-            "phoneNumber": "555-111-2222",
-            "email": "john.smith@example.com"
-          }
-        ]
-      }
-      ```
-    - **Error (Not Found)**:
-      ```json
-      {
-        "code": "404",
-        "errors": ["Update Patient", "Error on Updating Patient: Patient not found"],
-        "data": null
-      }
-      ```
-    - **Error**:
-      ```json
-      {
-        "code": "500",
-        "errors": ["Update Patient", "Error on Updating Patient"],
-        "data": null
-      }
-      ```
-
----
-
-### 5. Delete Patient
-- **Endpoint**: `DELETE /patient/{id}`
-- **Description**: Deletes the patient record with the provided ID.
-- **Path Parameters**:
-  - `id` (Long): The ID of the patient to delete.
-- **Response Body**:
-    - **Success**:
-      ```json
-      {
-        "code": "200",
-        "errors": [],
-        "data": null
-      }
-      ```
-    - **Error (Not Found)**:
-      ```json
-      {
-        "code": "404",
-        "errors": ["Delete Patient", "Error on Deleting Patient: Patient not found"],
-        "data": null
-      }
-      ```
-    - **Error**:
-      ```json
-      {
-        "code": "500",
-        "errors": ["Delete Patient", "Error on Deleting Patient"],
-        "data": null
-      }
-      ```
-
----
-
-## Error Handling
-- **404 (Not Found)**: Returned when a patient with the specified ID is not found.
-- **400 (Bad Request)**: Returned when validation fails or duplicate entries are attempted (e.g., duplicate email).
-- **500 (Internal Server Error)**: Returned for unexpected server-side errors.
-
----
-
 ## How to Run
 
 ### Backend
@@ -292,5 +194,39 @@ The Patient Management System provides RESTful APIs to manage patient records. T
     ```
     http://localhost:3000/
     ```
+
+---
+
+## Screenshots
+
+### Add New Patients
+![Add New Patients](screenshots/Add%20New%20Patients.png)
+
+### Added Records
+![Added Records](screenshots/added%20records.png)
+
+### Dashboard
+![Dashboard](screenshots/Dashboard.png)
+
+### Delete Patient
+![Delete Patient](screenshots/delete%20patient.png)
+
+### Email Validation
+![Email Validation](screenshots/email%20validation.png)
+
+### Inline Editing
+![Inline Editing](screenshots/inline%20editing.png)
+
+### Patient Added
+![Patient Added](screenshots/patient%20added.png)
+
+### Patient Deleted
+![Patient Deleted](screenshots/patient%20deleted.png)
+
+### Patient Update Section
+![Patient Update Section](screenshots/patient%20update%20section.png)
+
+### Phone Validation
+![Phone Validation](screenshots/phone%20validation.png)
 
 ---
