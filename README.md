@@ -142,6 +142,23 @@ The Patient Management System provides RESTful APIs to manage patient records. T
 
 ---
 
+
+## Table Create Query
+```
+CREATE TABLE patient (
+    id SERIAL PRIMARY KEY,               
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    address TEXT NOT NULL,      
+    city VARCHAR(100) NOT NULL, 
+    state VARCHAR(100) NOT NULL,
+    zip_code VARCHAR(20) NOT NULL,
+    phone_number VARCHAR(15) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE
+);
+```
+
+
 ## How to Run
 
 ### Backend
